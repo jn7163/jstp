@@ -15,5 +15,14 @@ module.exports = [
     name: 'object with non-identifier keys',
     value: { '*': 42 },
     serialized: '{\'*\':42}'
+  },
+  {
+    name: 'object with keyword as key',
+    value: { while: true },
+    serialized: '{while:true}'
+  }, {
+    name: 'object with escape sequences in keys',
+    value: { '\0': true },
+    serialized: '{\'\\u0000\':true}'
   }
 ];
